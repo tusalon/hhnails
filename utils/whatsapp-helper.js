@@ -211,7 +211,7 @@ Hola *${booking.cliente_nombre}*, tu turno ha sido agendado.
 
 📅 *Fecha:* ${fechaConDia}
 ⏰ *Hora:* ${horaFormateada}
-💅 *Servicio:* ${booking.servicio}
+💅 *Servicio:*${booking.servicio}
 👩‍🎨 *Profesional:* ${booking.profesional_nombre || booking.trabajador_nombre}
 
 ¡Te esperamos! ❤️`;
