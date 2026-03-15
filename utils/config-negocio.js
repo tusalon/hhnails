@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Studioisma.nails
+// CLIENTE: H&H STUDIO NAILS
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = 'd4f7e2b1-3a8c-4b6d-9e5f-1c2d3e4f5a6b'; // ID de Studioisma.nails
+const NEGOCIO_ID_POR_DEFECTO = 'f0533089-d445-4ebf-b5c5-5abbcf90f4ce'; // ID de H&H STUDIO NAILS
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'Studioisma.nails';
+    return config?.nombre || 'H&H STUDIO NAILS';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '54646800';
+    return config?.telefono || '54101232';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || '';
+    return config?.email || 'heylincuba@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a nuestro salón!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a H&H STUDIO NAILS!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'studioisma-notifications';
+    return config?.ntfy_topic || 'hhnails-notifications';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para Studioisma.nails');
+console.log('✅ config-negocio.js listo para H&H STUDIO NAILS');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);
